@@ -11,12 +11,13 @@
       "hash": "7dbcaf0327bcba279f2dcd07b824a693b1091beb"
     },
     "com.lucasackman.kickstarter": {
-      "version": "file:C:/Users/Ackma/OneDrive/Documents/GitHub/Kickstarter/Kickstarter/Assets/Kickstarter",
+      "version": "https://github.com/Sacred-Sticks/Project-Kickstarter.git",
       "depth": 0,
-      "source": "local",
+      "source": "git",
       "dependencies": {
         "com.unity.inputsystem": "1.7.0"
-      }
+      },
+      "hash": "299f28d4c5f7099680301a1e7ee5cf1fb5021a4f"
     },
     "com.unity.collab-proxy": {
       "version": "2.3.1",

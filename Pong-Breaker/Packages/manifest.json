@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.eflatun.scenereference": "git+https://github.com/starikcetin/Eflatun.SceneReference.git#4.0.0",
-    "com.lucasackman.kickstarter": "file:C:/Users/Ackma/OneDrive/Documents/GitHub/Kickstarter/Kickstarter/Assets/Kickstarter",
+    "com.lucasackman.kickstarter": "https://github.com/Sacred-Sticks/Project-Kickstarter.git",
     "com.unity.collab-proxy": "2.3.1",
     "com.unity.feature.development": "1.0.2",
     "com.unity.timeline": "1.8.6",
