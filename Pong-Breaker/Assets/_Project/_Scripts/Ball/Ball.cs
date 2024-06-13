@@ -17,17 +17,5 @@ namespace Pong_Breaker
         {
             body.AddForce(body.transform.right * initialSpeed, ForceMode.VelocityChange);
         }
-
-        private void OnCollisionEnter(Collision collision)
-        {
-            var collidable = CollidableMediator.GetCollidable(collision.transform.position);
-            collidable?.OnCollisionEnter(this);
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            var collidable = CollidableMediator.GetCollidable(other.transform.position);
-            collidable?.OnTriggerEnter(this);
-        }
     }
 }

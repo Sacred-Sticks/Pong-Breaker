@@ -7,7 +7,7 @@ namespace Pong_Breaker
     {
         private static Dictionary<Vector3, ICollidable> collidables = new Dictionary<Vector3, ICollidable>();
 
-        private void Start()
+        private void Awake()
         {
             collidables.Clear();
         }

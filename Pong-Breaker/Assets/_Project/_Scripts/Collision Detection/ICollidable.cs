@@ -2,7 +2,7 @@
 {
     public interface ICollidable
     {
-        public void OnCollisionEnter(Ball ball);
-        public void OnTriggerEnter(Ball ball);
+        public void OnCollision(Ball ball) { }
+        public void OnTrigger(Ball ball) { }
     }
 }
