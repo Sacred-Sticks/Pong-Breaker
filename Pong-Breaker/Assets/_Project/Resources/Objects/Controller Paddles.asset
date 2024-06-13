@@ -20,9 +20,33 @@ MonoBehaviour:
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
+    - m_Name: D-Pad
+      m_Id: 476891b7-3a84-4b6a-acb7-f6eab28050b8
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: f97555f5-f967-4784-a31f-21453cea7e4b
+      m_Path: <Gamepad>/dpad/down
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: 5609adb9-ae0f-464a-84eb-89775980d1e9
+      m_Path: <Gamepad>/dpad/up
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input
+      m_Flags: 8
     - m_Name: 
-      m_Id: dc5087cc-92b1-49ac-8413-72f84d6cba4e
-      m_Path: <Joystick>/stick/y
+      m_Id: b8e2997f-835c-4642-ab7c-d2da1caa6408
+      m_Path: <Gamepad>/leftStick/y
       m_Interactions: 
       m_Processors: 
       m_Groups: 
