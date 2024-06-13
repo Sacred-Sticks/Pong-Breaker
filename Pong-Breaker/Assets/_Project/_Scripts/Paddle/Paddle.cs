@@ -43,10 +43,11 @@ namespace Pong_Breaker
         #endregion
 
         #region ICollidable
-        public void OnCollision(Ball ball, Collision collision)
+        public bool OnCollision(BallMediator ball, Collision collision)
         {
             float collisionHeight = transform.InverseTransformPoint(collision.GetContact(0).point).y;
             ball.CollideWithHeight(collisionHeight);
+            return false;
         }
         #endregion
     }

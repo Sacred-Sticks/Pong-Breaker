@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 652733518928980011}
   - component: {fileID: 5548744023957434927}
-  m_Layer: 0
-  m_Name: Paddle
+  m_Layer: 7
+  m_Name: Paddle Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b6c0fbff208b9f438b00d22fe4811e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movePaddle: {fileID: 11400000, guid: 3a119d80e72ea7d428e942d71a5af535, type: 2}
+  movePaddle: {fileID: 11400000, guid: 0cdeb946f270fb2449f39cac8072bd9d, type: 2}
   movementSpeed: 5
 --- !u!1 &6587546902694348762
 GameObject:
@@ -57,7 +57,8 @@ GameObject:
   - component: {fileID: 6206374385796583919}
   - component: {fileID: 452753886789401286}
   - component: {fileID: 4465886111543107576}
-  m_Layer: 0
+  - component: {fileID: 820194938721963527}
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,6 +123,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!65 &820194938721963527
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6587546902694348762}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7259327379655775619
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +155,7 @@ GameObject:
   - component: {fileID: 3027215368516569119}
   - component: {fileID: 3305150283271246558}
   - component: {fileID: 8049846343889451264}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +240,7 @@ GameObject:
   - component: {fileID: 8602519881423831560}
   - component: {fileID: 7154883595096815208}
   - component: {fileID: 5969119483389381211}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collision Physics
   m_TagString: Untagged
   m_Icon: {fileID: 0}

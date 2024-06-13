@@ -4,17 +4,34 @@ namespace Pong_Breaker
 {
     public class BallCollision : MonoBehaviour
     {
-        Ball ballMediator;
+        BallMediator ballMediator;
 
         private void Awake()
         {
-            ballMediator = GetComponentInChildren<Ball>();
+            ballMediator = GetComponentInChildren<BallMediator>();
         }
 
         private void OnCollisionEnter(Collision collision)
         {
             var collidable = collision.transform.root.GetComponentInChildren<ICollidable>();
-            collidable?.OnCollision(ballMediator, collision);
+            bool? brickHit = collidable?.OnCollision(ballMediator, collision);
+
+            var relativeVelocity = collision.relativeVelocity;
+
+            switch (brickHit)
+            {
+                case null:
+                    relativeVelocity.x = -relativeVelocity.x;
+                    break;
+                case true:
+                    break;
+                case false:
+                    relativeVelocity.y = -relativeVelocity.y;
+                    break;
+            }
+
+
+            ballMediator.OverwriteVelocity(relativeVelocity);
         }
 
         private void OnTriggerEnter(Collider other)
