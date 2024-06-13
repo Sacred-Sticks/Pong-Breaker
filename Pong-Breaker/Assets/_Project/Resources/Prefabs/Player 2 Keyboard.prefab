@@ -12,9 +12,13 @@ PrefabInstance:
       propertyPath: movePaddle
       value: 
       objectReference: {fileID: 11400000, guid: 2f18d142e4386274aa868b5839d5a6be, type: 2}
+    - target: {fileID: 5548744023957434927, guid: d384f4de36f64684dbf7519c4f4e59db, type: 3}
+      propertyPath: playerTarget
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6206374385796583919, guid: d384f4de36f64684dbf7519c4f4e59db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6206374385796583919, guid: d384f4de36f64684dbf7519c4f4e59db, type: 3}
       propertyPath: m_LocalPosition.y

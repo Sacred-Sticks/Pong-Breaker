@@ -7,6 +7,7 @@ namespace Pong_Breaker
     {
         [SerializeField] private FloatInput movePaddle;
         [SerializeField] private float movementSpeed = 1f; // [m/s
+        [SerializeField] private ScoreMediator.ScoreTarget playerTarget;
 
         private float rawInput;
 
@@ -47,6 +48,7 @@ namespace Pong_Breaker
         {
             float collisionHeight = transform.InverseTransformPoint(collision.GetContact(0).point).y;
             ball.CollideWithHeight(collisionHeight);
+            ball.LastTouched = playerTarget;
             return false;
         }
         #endregion

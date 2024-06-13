@@ -8,6 +8,7 @@ namespace Pong_Breaker
         [SerializeField] private float collisionSpeedModifier = 1f; // [m/s
 
         public Rigidbody Body { get; private set; }
+        public ScoreMediator.ScoreTarget LastTouched { get; set; }
 
         #region UnityEvents
         private void Awake()
