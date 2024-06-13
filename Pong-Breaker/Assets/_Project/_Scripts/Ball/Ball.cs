@@ -6,7 +6,7 @@ namespace Pong_Breaker
     {
         [SerializeField] private float initialSpeed = 10f; // [m/s
 
-        private Rigidbody body;
+        public Rigidbody body { get; private set; }
 
         private void Awake()
         {

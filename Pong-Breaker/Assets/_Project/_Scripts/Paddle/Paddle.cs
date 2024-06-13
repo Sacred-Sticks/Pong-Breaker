@@ -41,5 +41,14 @@ namespace Pong_Breaker
             body.AddForce(new Vector3(0, rawInput * movementSpeed, 0) - body.velocity, ForceMode.VelocityChange);
         }
         #endregion
+
+        #region ICollidable
+        public void OnCollision(Ball ball, Collision collision)
+        {
+            var contact = collision.GetContact(0).point;
+            var point = transform.InverseTransformPoint(contact);
+            Debug.Log(point);
+        }
+        #endregion
     }
 }

@@ -13,13 +13,13 @@ namespace Pong_Breaker
 
         private void OnCollisionEnter(Collision collision)
         {
-            var collidable = CollidableMediator.GetCollidable(collision.transform.position);
-            collidable?.OnCollision(ballMediator);
+            var collidable = collision.transform.root.GetComponentInChildren<ICollidable>();
+            collidable?.OnCollision(ballMediator, collision);
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            var collidable = CollidableMediator.GetCollidable(other.transform.position);
+            var collidable = other.transform.root.GetComponentInChildren<ICollidable>();
             collidable?.OnTrigger(ballMediator);
         }
     }

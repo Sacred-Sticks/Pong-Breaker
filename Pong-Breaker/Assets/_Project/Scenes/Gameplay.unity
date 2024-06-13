@@ -750,7 +750,7 @@ GameObject:
   - component: {fileID: 1167311090}
   - component: {fileID: 1167311091}
   m_Layer: 0
-  m_Name: Ball Collision
+  m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -829,7 +829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePaddle: {fileID: 11400000, guid: 3a119d80e72ea7d428e942d71a5af535, type: 2}
-  movementSpeed: 1
+  movementSpeed: 5
 --- !u!1 &1788480435
 GameObject:
   m_ObjectHideFlags: 0
