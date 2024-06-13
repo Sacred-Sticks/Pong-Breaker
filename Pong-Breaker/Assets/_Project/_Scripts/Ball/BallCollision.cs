@@ -4,6 +4,8 @@ namespace Pong_Breaker
 {
     public class BallCollision : MonoBehaviour
     {
+        private const float speedMultiplier = 1.025f;
+
         BallMediator ballMediator;
 
         private void Awake()
@@ -27,9 +29,9 @@ namespace Pong_Breaker
                     break;
                 case false:
                     relativeVelocity.y = -relativeVelocity.y;
+                    relativeVelocity *= speedMultiplier;
                     break;
             }
-
 
             ballMediator.OverwriteVelocity(relativeVelocity);
         }
