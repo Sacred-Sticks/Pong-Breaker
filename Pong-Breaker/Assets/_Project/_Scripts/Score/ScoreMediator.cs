@@ -15,6 +15,10 @@ namespace Pong_Breaker
 
         private readonly Dictionary<ScoreTarget, Label> playerScores = new Dictionary<ScoreTarget, Label>();
 
+        // storing scores statically so that the scene can be reloaded without losing the scores
+        private static int player1Score = 0;
+        private static int player2Score = 0;
+
         private const string containerStr = "container";
         private const string scoreStr = "score";
 
@@ -33,8 +37,8 @@ namespace Pong_Breaker
             playerScores.Add(ScoreTarget.Player1, container.CreateChild<Label>(scoreStr));
             playerScores.Add(ScoreTarget.Player2, container.CreateChild<Label>(scoreStr));
 
-            foreach (var playerScore in playerScores)
-                playerScore.Value.text = "0";
+            playerScores[ScoreTarget.Player1].text = player1Score.ToString();
+            playerScores[ScoreTarget.Player2].text = player2Score.ToString();
         }
 
         public enum ScoreTarget
@@ -43,10 +47,20 @@ namespace Pong_Breaker
             Player2,
         }
 
-        public void AddScore(ScoreTarget target, int modication)
+        public void AddScore(ScoreTarget target, int modification)
         {
-            int score = int.Parse(playerScores[target].text);
-            score += modication;
+            int score = 0;
+            switch (target)
+            {
+                case ScoreTarget.Player1:
+                    player1Score += modification;
+                    score = player1Score;
+                    break;
+                case ScoreTarget.Player2:
+                    player2Score += modification;
+                    score = player2Score;
+                    break;
+            }
             playerScores[target].text = score.ToString();
         }
     }
